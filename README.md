@@ -24,7 +24,7 @@ This endpoint verify that the Alert name entered is conform (ie : CVE-2012-2010 
 Exemples
 --------
 #### Force layout 
-![alt tag](https://raw.github.com/security-database/vdna-crosslinks/blob/master/samples/Force.jpg)
+![Force layout ](/samples/Force.jpg?raw=true)
 
 Output Sample
 -------------
