@@ -10,6 +10,11 @@ On this 'simple' exemple, we use D3.js library and CoffeeScript to manipulate an
 
 [Security-Database](https://www.security-database.com) provides this information for free for anybody who want to play with, make graphs, stats, publish or anything else. Hope you'll enjoy playing with it and perhaps, let you have some idea ;)
 
+Live Demo
+--------
+
+A live demo and self promo web site is actually available here : [http://crosslink.security-database.com](http://crosslink.security-database.com). You can play with alerts, data, filters, layout.
+
 
 The endpoint
 ------------
