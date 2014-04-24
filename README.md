@@ -27,7 +27,8 @@ Output Sample
 ###Success : Json ouput Exemple
 #### Sample :
 
-```{
+```json
+{
     "success" : true,
     "message" :
         {
@@ -62,7 +63,8 @@ Output Sample
     
 ###Error : Json ouput Exemple
 #### Sample :
-```{
+```json
+{
 	"success" : false,
 		"message" : [
 	        {
