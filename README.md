@@ -76,24 +76,3 @@ Output Sample
 ```
 #### Definition : 
 - __Exemple__ : Depth, must be between 0 and 4 (0 is selected alert only)
-
-
-##License
-
-This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
-
-__You are free to:__
-
-- __Share__ — copy and redistribute the material in any medium or format
-- __Adapt__ — remix, transform, and build upon the material
-
-	for any purpose, even commercially.
-
-__Under the following terms:__
-
-- __Attribution__ — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-
-	What does "Attribute this work" mean?
-
-	The page you came from contained embedded licensing metadata, including how the creator wishes to be attributed for re-use. You can use the HTML here to cite the work. Doing so will also include metadata on your page so that others can find the original work as well.
-- __ShareAlike__ — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
