@@ -23,8 +23,12 @@ This endpoint verify that the Alert name entered is conform (ie : CVE-2012-2010 
 
 Exemples
 --------
-#### Force layout 
+### Force layout 
 ![Force layout ](/samples/Force.jpg?raw=true)
+
+### Force layout 
+![Severity layout ](/samples/Severity.jpg?raw=true)
+
 
 Output Sample
 -------------
