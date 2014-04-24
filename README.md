@@ -50,16 +50,16 @@ Output Sample
 
 #### Definition : 
 ##### Datas (Nodes)
-- severity : Source alert severity (Critical, High, Medium, Low or NA)
-- id : Alert Name (SD naming scheme)
-- vendor : Source vendor (Microsoft, cve, HP...)
-- published : Source published date (YYYY-MM-DD)
-- type : Actually Alerts, perhaps some other later
-- links : Numbers of links from this alert (integer)
+- __severity__ : Source alert severity (Critical, High, Medium, Low or NA)
+- __id__ : Alert Name (SD naming scheme)
+- __vendor__ : Source vendor (Microsoft, cve, HP...)
+- __published__ : Source published date (YYYY-MM-DD)
+- __type__ : Actually Alerts, perhaps some other later
+- __links__ : Numbers of links from this alert (integer)
 
 ##### Datas (Links)
-- source : id From
-- target : id To    
+- __source__ : id From
+- __target__ : id To    
     
     
 ###Error : Json ouput Exemple
@@ -75,7 +75,7 @@ Output Sample
 }
 ```
 #### Definition : 
-- Exemple : Depth, must be between 0 and 4 (0 is selected alert only)
+- __Exemple__ : Depth, must be between 0 and 4 (0 is selected alert only)
 
 
 ##License
