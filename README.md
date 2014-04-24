@@ -13,7 +13,7 @@ On this 'simple' exemple, we use D3.js library and CoffeeScript to manipulate an
 Live Demo
 --------
 
-A live demo and self promo web site is actually available here : [http://crosslink.security-database.com](http://crosslink.security-database.com). You can play with alerts, data, filters, layout.
+A live demo and self promo web site is actually available here : [http://crosslinks.security-database.com](http://crosslinks.security-database.com). You can play with alerts, data, filters, layout.
 
 
 The endpoint
