@@ -84,7 +84,4 @@ Output Sample
 }
 ```
 #### Definition : 
-<<<<<<< .mine
-- __Exemple__ : Depth, must be between 0 and 4 (0 is selected alert only)=======
 - __Exemple__ : Depth, must be between 0 and 4 (0 is selected alert only)
->>>>>>> .r11
