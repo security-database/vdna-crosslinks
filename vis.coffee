@@ -481,17 +481,47 @@ Network = () ->
   setSort = (newSort) ->
     sort = newSort
 
-  # tick function for force directed layout
   forceTick = (e) ->
-    node
-      .attr("cx", (d) -> d.x)
-      .attr("cy", (d) -> d.y)
+    q = d3.geom.quadtree(curNodesData)
+    i = 0
+    n = curNodesData.length
+    q.visit collide(curNodesData[i])  while ++i < n
+    d3.selectAll("circle").attr("cx", (d) ->
+      d.x
+    ).attr("cy", (d) ->
+      d.y
+    )
 
-    link
-      .attr("x1", (d) -> d.source.x)
-      .attr("y1", (d) -> d.source.y)
-      .attr("x2", (d) -> d.target.x)
-      .attr("y2", (d) -> d.target.y)
+    link.attr("x1", (d) ->
+      d.source.x
+    ).attr("y1", (d) ->
+      d.source.y
+    ).attr("x2", (d) ->
+      d.target.x
+    ).attr "y2", (d) ->
+      d.target.y
+
+
+
+  collide = (node) ->
+    r = node.radius + 16
+    nx1 = node.x - r
+    nx2 = node.x + r
+    ny1 = node.y - r
+    ny2 = node.y + r
+    (quad, x1, y1, x2, y2) ->
+      if quad.point && (quad.point != node)
+        x = node.x - quad.point.x
+        y = node.y - quad.point.y
+        l = Math.sqrt(x * x + y * y)
+        r = node.radius + quad.point.radius
+        if (l < r)
+          l = (l - r) / l * .5
+          node.x -= x *= l
+          node.y -= y *= l
+          quad.point.x += x
+          quad.point.y += y
+      return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1
 
   # tick function for radial layout
   radialTick = (e) ->
