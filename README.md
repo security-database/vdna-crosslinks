@@ -90,3 +90,9 @@ Output Sample
 ```
 #### Definition : 
 - __Exemple__ : Depth, must be between 0 and 4 (0 is selected alert only)
+
+Credits
+---------
+
+- Thanks to Jim Vallandingham for his inspiration and demo "How to Make an Interactive Network Visualization" available at http://flowingdata.com/2012/08/02/how-to-make-an-interactive-network-visualization/
+- D3js for the awesome works
