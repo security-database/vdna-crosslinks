@@ -1,6 +1,5 @@
 <?php
 
-
 $alert = "";
 $depth = "";
 
@@ -12,8 +11,8 @@ $depth_get = 0;
 
 // Check Alert Name
 
-if (isset($_GET["alert"]) == TRUE) {
-	// Security-Database alert_name.php handle Alert naming error and return 0 (error) or 1 (success)
+if (isset($_GET["alert"]) == true) {
+    // Security-Database alert_name.php handle Alert naming error and return 0 (error) or 1 (success)
     $result = file_get_contents("http://crosslinks.security-database.com/alert_name.php?alert=".$_GET["alert"]);
 
     if ($result == 1) {
@@ -35,7 +34,7 @@ if (isset($_GET["alert"]) == TRUE) {
 }
 
 
-if (isset($_GET["depth"]) == TRUE) {
+if (isset($_GET["depth"]) == true) {
     if ((int)$_GET["depth"] > -1 && (int)$_GET["depth"] < 5) {
         $depth = (int)$_GET["depth"];
         $depth_get = 1;
@@ -60,8 +59,10 @@ if (isset($_GET["depth"]) == TRUE) {
 
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.4.2/pure-min.css">
 
-        <link rel="stylesheet" type="text/css" href="./menu.css">
-        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="/css/menu.css">
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/opentip/opentip.css" />
+
 
         <script type="text/javascript">
             var sname = <?php echo "'".$alert."'"; ?>;
@@ -69,7 +70,7 @@ if (isset($_GET["depth"]) == TRUE) {
         </script>
     </head>
 <body>
-
+<div id="tooltip2" class="tooltip2"></div>
 <div id="layout">
     <div id="main">
 
@@ -140,6 +141,15 @@ if (isset($_GET["depth"]) == TRUE) {
                     <a id="Sun" class="active">Sun</a>
                     <a id="VMware" class="active">VMware</a>
                   </div>
+                  <!--
+                  <div id="filters_exploits" class="control">
+                    <h3>Exploit Filter</h3>
+                    <a id="Nessus" class="active">Nessus</a>
+                    <a id="Metasploit" class="active">Metasploit</a>
+                    <a id="OpenVas" class="active">OpenVas</a>
+                    <a id="Snort" class="active">Snort</a>
+                  </div>
+                  -->
               </div>
             </div>
             <div id="main2" role="main">
@@ -193,12 +203,14 @@ if (isset($_GET["depth"]) == TRUE) {
 
 
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript"  src="/grapher/grapher.js"></script>
+<script type="text/javascript"  src="/grapher/center.js"></script>
+<script type="text/javascript"  src="/grapher/zoom.js"></script>
+<script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
+<script type="text/javascript"  src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript"  src="/opentip/opentip-jquery-excanvas.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.3.11/d3.min.js"></script>
-
-<script type="text/javascript" src="/coffee-script.js"></script>
-<script type="text/javascript" src="/Tooltip.js"></script>
-<script type="text/coffeescript" src="/vis.coffee"></script>
+<script type="text/javascript"  src="/js/crosslinks.js"></script>
 
 
 

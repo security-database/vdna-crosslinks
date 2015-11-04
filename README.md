@@ -1,12 +1,12 @@
 vDNA Crosslinks
 ===============
 
-Security-Database vDNA Crosslinks
----------------------------------
+Security-Database vDNA Crosslinks v2
+------------------------------------
 
 vDNA Crosslinks allows you to gather +80.000 security alerts data from [Security-Database](https://www.security-database.com) and export it as JSON. Export provide related alert information. By that we mean, all alerts linked to the first one at specified depth. We limit the depth from 0 (single) to 4, but on demand, we can override this value.
 
-On this 'simple' exemple, we use D3.js library and CoffeeScript to manipulate and represent links bewteen alerts and severity propagation. Hope you'll like it.
+On this exemple, we use D3.js library and Grapher to manipulate and represent links bewteen alerts and severity propagation. Hope you'll like it.
 
 [Security-Database](https://www.security-database.com) provides this information for free for anybody who want to play with, make graphs, stats, publish or anything else. Hope you'll enjoy playing with it and perhaps, let you have some idea ;)
 
@@ -28,10 +28,10 @@ This endpoint verify that the Alert name entered is conform (ie : CVE-2012-2010 
 
 Exemples
 --------
-### Force layout 
+### Force layout
 ![Force layout ](/samples/Force.jpg?raw=true)
 
-### Force layout 
+### Force layout
 ![Severity layout ](/samples/Severity.jpg?raw=true)
 
 
@@ -62,7 +62,7 @@ Output Sample
 }
 ```
 
-#### Definition : 
+#### Definition :
 ##### Datas (Nodes)
 - __severity__ : Source alert severity (Critical, High, Medium, Low or NA)
 - __id__ : Alert Name (SD naming scheme)
@@ -73,9 +73,9 @@ Output Sample
 
 ##### Datas (Links)
 - __source__ : id From
-- __target__ : id To    
-    
-    
+- __target__ : id To
+
+
 ###Error : Json ouput Exemple
 #### Sample :
 ```json
@@ -88,11 +88,16 @@ Output Sample
 	    ]
 }
 ```
-#### Definition : 
+#### Definition :
 - __Exemple__ : Depth, must be between 0 and 4 (0 is selected alert only)
+
+Updates
+---------
+- V2.0 Use Grapher to render in WebGL. Faster !! Really faster !!!
+- V1.0 Initial release in SVG mode
 
 Credits
 ---------
-
+- Thanks to Ayasdi for Grapher library that render into WebGL a Canvas! https://github.com/ayasdi/grapher
 - Thanks to Jim Vallandingham for his inspiration and demo "How to Make an Interactive Network Visualization" available at http://flowingdata.com/2012/08/02/how-to-make-an-interactive-network-visualization/
 - D3js for the awesome works
