@@ -57,7 +57,7 @@ if (isset($_GET["depth"]) == true) {
 
 
 
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.4.2/pure-min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
 
         <link rel="stylesheet" type="text/css" href="/css/menu.css">
         <link rel="stylesheet" type="text/css" href="/css/style.css">
